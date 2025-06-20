@@ -1,0 +1,85 @@
+:root {
+  --color-dominante: #7c444f; /* Dominante */
+  --color-secundario: #9f5255; /* Secundario */
+  --color-acento: #e16a54; /* Acento */
+  --color-fondo: #f39e60; /* Fondo suave */
+  --color-blanco: #fff;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: var(--color-fondo);
+}
+header {
+  background: var(--color-dominante);
+  color: var(--color-blanco);
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  border-bottom: 4px solid var(--color-acento);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.item {
+  background: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(124, 68, 79, 0.08); /* Dominante con opacidad */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid var(--color-secundario); /* Secundario */
+}
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid var(--color-acento); /* Acento */
+}
+.item h3 {
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--color-dominante); /* Dominante */
+}
+.item .desc-corta {
+  font-size: 0.95rem;
+  color: var(--color-secundario); /* Secundario */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.item .desc-larga {
+  font-size: 0.9rem;
+  color: var(--color-dominante); /* Dominante */
+  text-align: justify;
+}
+footer {
+  background: var(--color-secundario);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  border-top: 4px solid var(--color-acento);
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .item {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .catalogo {
+    gap: 1rem;
+  }
+}
